@@ -1,0 +1,30 @@
+<h1 align="center">To do lists</h1>
+
+<div ng-app>
+     <h2> List Of Employees</h2>
+
+    <div ng-controller="todosController">Schedule Update:
+        <input type="text" ng-model="newTodo">
+            Value:
+        <input type="text" ng-model="newvalue">
+             <div ng-show="showList">
+        <ul class="unstyled">
+            <li ng-repeat="todo in todos">
+                <input type="checkbox" ng-model="todo.done"> <span class="done-{{todo.done}}">{{todo.text}}</span>
+
+            </li>
+        </ul>
+           </div>
+            <select ng-model="mySelect">
+                <option value="Show">Show</option>
+                <option value="Hide">Hide</option>
+            </select>
+        
+        <button ng-click="addNew()" type="button">ADD</button>
+        <button ng-click="remove()" type="button">Delete</button>
+        <button ng-click="mark()" type="button">Mark all completed</button>
+        <button ng-click="undone()" type="button">Mark all undone</button>
+        <button ng-click="show()" type="button">ShowValue</button>
+        
+    </div>
+</div>

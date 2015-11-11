@@ -1,0 +1,18 @@
+<h1>Employee Table</h1>
+<style>
+table, td  {
+  border: 2px double grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+</style>
+<div ng-controller="tableController">
+<table>
+  <tr ng-repeat="emp in employees">
+    <td>{{ emp.name }}</td>
+    <td>{{ emp.age }}</td>
+	  <td>{{ emp.class }}</td>
+	    <td>{{ emp.address }}</td>
+  </tr>
+</table>
+</div>

@@ -1,0 +1,29 @@
+ <h1>Angular Js- Expanding Row Data</h1>
+    <div ng-controller="ExpandingController">
+      <table>
+        <thead style="background-color: lightgray;">
+          <tr>
+            <td style="width: 30px;"></td>
+            <td>Employee Details</td>
+          
+          </tr>  
+        </thead>
+        <tbody>
+          <tr ng-repeat-start="emp in employees">
+            <td>
+              <button ng-if="emp.expanded" ng-click="emp.expanded = false">-</button>
+              <button ng-if="!emp.expanded" ng-click="emp.expanded = true">+</button>
+            </td>
+            <td>{{emp.name}}</td>
+            
+          </tr>
+          <tr ng-if="emp.expanded" ng-repeat-end="">
+            <td colspan="2"> <b>Age : </b>{{emp.age}}&nbsp
+			 <b> Class: </b>{{emp.class}} &nbsp
+			  <b> Address: </b> {{emp.address}} </td> 
+          </tr>
+		  
+        </tbody>
+      </table>
+
+  
